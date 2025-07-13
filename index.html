@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solvr | The Ultimate AI Study Partner for IGCSE & A-Levels</title>
+    <meta name="description" content="Stop struggling with past papers. Solvr is an AI platform offering adaptive practice, step-by-step solutions, and expert exam insights for IGCSE & A-Level students.">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+    
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&family=Ubuntu:wght@400;500&family=TikTok+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        html.lenis { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto; }
+        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+    </style>
+</head>
+<body>
+
+    <div id="app" v-cloak>
+
+        <div class="theme-switcher" @click="toggleTheme" :title="isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
+            <svg class="sun-svg" v-if="!isDarkMode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+            <svg class="moon-svg" v-if="isDarkMode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+        </div>
+
+        <header class="main-header">
+            <nav class="container">
+                <a href="#" class="logo">solvr</a>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#waitlist">Beta Access</a>
+                </div>
+                <a href="#waitlist" class="cta-button">Join The Waitlist</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="hero">
+                <div class="container">
+                    <div class="creator-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path><path d="m9 12 2 2 4-4"></path></svg>
+                        <span>By A-Level survivors, for future high-achievers</span>
+                    </div>
+                    <h1 class="hero-headline">
+                        <div class="line-1">Stop Guessing,</div>
+                        <div class="line-2 text-gradient">Start Understanding.</div>
+                    </h1>
+                    <p class="hero-subheadline">The AI study partner for IGCSE, AS, and A-Levels that decodes past papers and builds your exam confidence.</p>
+                </div>
+            </section>
+            
+            <section id="why-solvr">
+                <div class="container why-solvr-grid">
+                    <div class="why-solvr-text">
+                        <h2 class="pain-point-headline">Stuck on a 2018 Physics paper at 2 AM with a mark scheme that makes zero sense?</h2>
+                        <p>You've checked the textbook, watched a dozen videos, and you're still staring at the same question. It's frustrating, demotivating, and a massive waste of time. That feeling of being completely lost is <span>exactly why we built Solvr.</span></p>
+                    </div>
+                    <div class="why-solvr-illustration">
+                        <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                            <path class="tangled-path" d="M 20,80 C 80,20 120,150 180,80 S 250,50 280,120" stroke-dasharray="5 5" />
+                            <path class="clear-path" d="M 20,80 C 100,100 200,100 280,120" />
+                            <circle class="start-node" cx="20" cy="80" r="8" />
+                            <circle class="end-node" cx="280" cy="120" r="8" />
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <section id="features">
+                <div class="container">
+                    <h2 class="section-title">A Smarter Way to Revise</h2>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg></div>
+                            <h3>Step-by-Step Solutions</h3>
+                            <p>Understand the 'why' behind every mark with clear, logical breakdowns for complex questions.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" x2="18" y1="12" y2="12"></line><line x1="6" x2="2" y1="12" y2="12"></line><line x1="12" x2="12" y1="6" y2="2"></line><line x1="12" x2="12" y1="22" y2="18"></line></svg></div>
+                            <h3>Adaptive Practice</h3>
+                            <p>Our AI identifies your weak spots and serves targeted questions to build lasting knowledge.</p>
+                        </div>
+                        <div class="feature-card">
+                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"></path></svg></div>
+                            <h3>Personalized AI Tutor</h3>
+                            <p>Ask questions and get explanations that adapt to your unique learning style, 24/7.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18h.01"></path><path d="M16 12h.01"></path><path d="M12 12h.01"></path><path d="M8 12h.01"></path><path d="M12 6h.01"></path><path d="M5 12a7 7 0 1 0 14 0 7 7 0 1 0-14 0"></path><path d="M12 22v-2"></path></svg></div>
+                            <h3>Interactive Concept Maps</h3>
+                            <p>Visually connect topics to see the bigger picture and understand how everything links together.</p>
+                        </div>
+                        <div class="feature-card">
+                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg></div>
+                            <h3>Progress Analytics</h3>
+                            <p>Track your performance over time, identify trends, and watch your exam readiness improve.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg></div>
+                            <h3>Examiner-Level Insights</h3>
+                            <p>We analyze thousands of papers to find hidden patterns and techniques that unlock top grades.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="testimonials">
+                <div class="container">
+                     <h2 class="section-title">Feedback from Alpha Testers</h2>
+                     <div class="testimonial-carousel-wrapper">
+                         <div class="testimonial-carousel">
+                             <div class="testimonial-track">
+                                 <div class="testimonial-slide">
+                                     <div class="testimonial-card">
+                                        <div class="testimonial-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+                                        <blockquote>
+                                            <p>Solvr is an innovative platform that completely changes IGCSE MCQ preparation by compiling all the past papers into one <span class="text-highlight">organized and easy to navigate</span> place which is extremely effective for tracking progress. I personally found it to be of tremendous help, letting me revisit mistakes in topics such as Ratios and Analysis to assess my performance and then solidify my concepts.</p>
+                                            <cite>— Dhruv, Year 11 Student</cite>
+                                        </blockquote>
+                                    </div>
+                                 </div>
+                                 <div class="testimonial-slide">
+                                      <div class="testimonial-card">
+                                        <div class="testimonial-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 17-5-5 5-5"></path><path d="m6 17-5-5 5-5"></path></svg></div>
+                                        <blockquote>
+                                            <p>Solvr has made solving mcqs <span class="text-highlight">ten times easier</span>. I no longer needed to waste time going through the mark scheme for every question, which helps with quick revision and practice. It has mcqs for all subjects I opted, with questions from different variants and recent sessions, making it the one website I relied on during my IGCSES.</p>
+                                            <cite>— Anika, Year 11 Student</cite>
+                                        </blockquote>
+                                    </div>
+                                 </div>
+                                  <div class="testimonial-slide">
+                                      <div class="testimonial-card">
+                                        <div class="testimonial-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg></div>
+                                        <blockquote>
+                                            <p>Solvr.in was a huge help during my board exams — it saved me so much time. I especially loved the built-in answer key feature that <span class="text-highlight">checked all my answers instantly</span>. It made doing past papers faster, easier, and way more convenient. Highly recommend it to anyone preparing for boards.</p>
+                                            <cite>— Ripple, Year 10 Student</cite>
+                                        </blockquote>
+                                    </div>
+                                 </div>
+                                  <div class="testimonial-slide">
+                                      <div class="testimonial-card">
+                                        <div class="testimonial-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg></div>
+                                        <blockquote>
+                                            <p>Solvr has been a lifesaver for exam prep. The instant feedback system <span class="text-highlight">cut my revision time in half</span>, letting me focus on *actually learning* from my mistakes instead of just searching for answers. My time management during mocks has improved dramatically.</p>
+                                            <cite>— Zayan, Year 10 Student</cite>
+                                        </blockquote>
+                                    </div>
+                                 </div>
+                                 <div class="testimonial-slide">
+                                      <div class="testimonial-card">
+                                        <div class="testimonial-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11v-4a1 1 0 0 1 1-1h3"></path><path d="M11 11 3 3"></path><path d="m18 13 5 5-5 5"></path><path d="M3 21h3a1 1 0 0 0 1-1v-4"></path></svg></div>
+                                        <blockquote>
+                                            <p>My biggest weakness was always the multiple-choice papers dragging my overall grade down. After three months of consistent practice on Solvr, the AI helped me patch up my conceptual gaps in Economics. My MCQ scores improved so much that my <span class="text-highlight">overall grade went from a B to an A.</span> Honestly unbelievable.</p>
+                                            <cite>— Aashvi, Year 12 Student</cite>
+                                        </blockquote>
+                                    </div>
+                                 </div>
+                                 <div class="testimonial-slide">
+                                     <div class="testimonial-card">
+                                        <div class="testimonial-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div>
+                                        <blockquote>
+                                            <p>Having all my subjects in one place on Solvr is incredible. I can switch from practicing Chemistry MCQs to Business Studies <span class="text-highlight">without opening a million different PDFs</span>. The personalized recommendations are clutch for focusing on my weak topics before a test.</p>
+                                            <cite>— Inaya, Year 10 Student</cite>
+                                        </blockquote>
+                                    </div>
+                                 </div>
+                                  <div class="testimonial-slide">
+                                      <div class="testimonial-card">
+                                        <div class="testimonial-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></div>
+                                        <blockquote>
+                                            <p>I started using Solvr in Year 9 to get ahead. It's not as scary as I thought! The platform is super easy to use, and it makes me feel <span class="text-highlight">way more prepared for what's to come</span>. It’s actually kind of fun to see my progress.</p>
+                                            <cite>— Briyan, Year 9 Student</cite>
+                                        </blockquote>
+                                    </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="testimonial-nav"></div>
+                     </div>
+                </div>
+            </section>
+            
+            <section id="waitlist">
+                <div class="container waitlist-container">
+                    <h2>Get Your Invitation.</h2>
+                    <p>Be among the first to experience the future of revision. Our beta is launching soon for major subjects and will be completely free for early adopters.</p>
+                    
+                    <form name="waitlist" method="POST" data-netlify="true" @submit.prevent="joinWaitlist" class="waitlist-form">
+                        <input type="hidden" name="form-name" value="waitlist" />
+                        <div v-if="!formSubmitted" class="form-content">
+                            <input type="email" name="email" v-model="email" placeholder="your.email@school.edu" required>
+                            <button type="submit" class="cta-gradient-button">Secure My Spot</button>
+                        </div>
+                        <div v-if="formSubmitted" class="form-success">
+                            <h3>{{ formMessage }}</h3>
+                            <p>Welcome aboard! We'll be in touch with your exclusive beta access link soon.</p>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="main-footer">
+            <div class="container footer-grid">
+                <div class="footer-left">
+                    <p>© {{ new Date().getFullYear() }} Solvr. All rights reserved.</p>
+                    <p class="credit-line">Made with <svg class="heart-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.942 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.942z"/></svg> by <a href="https://github.com/arnavravinder" target="_blank" rel="noopener noreferrer">Arnav Ravinder</a> & team.</p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-socials">
+                        <a href="#" aria-label="X (formerly Twitter)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                        <a href="https://www.linkedin.com/company/solvr-in" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 1 1 8.25 6.5 1.75 1.75 0 0 1 6.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0 0 13 14.19a.66.66 0 0 0 0 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 0 1 2.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg></a>
+                        <a href="mailto:arnav@solvr.in" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></a>
+                    </div>
+                    <div class="footer-legal">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis({ lerp: 0.08, wheelMultiplier: 1.2 });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+    </script>
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>
